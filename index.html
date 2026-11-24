@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВкусноДом — Поиск рецептов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="index">
+    <div class="top-banner">
+        <div class="marquee-track">
+            <span>Сайт разработан: Балалаева Дарья | ИС 1-25 | 2026 год</span>
+            <span>🎓 Учебный проект по веб-разработке</span>
+            <span>Сайт разработан: Балалаева Дарья | ИС 1-25 | 2026 год</span>
+            <span>🎓 Учебный проект по веб-разработке</span>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">🍳 ВкусноДом</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">🔍 Поиск</a></li>
+                    <li><a href="recipes.html">📖 Рецепты</a></li>
+                    <li><a href="favorites.html">❤️ Избранное</a></li>
+                    <li><a href="add.html">➕ Добавить</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🍽️ Что приготовить сегодня?</h1>
+            <p>Найдите идеальный рецепт по ингредиентам, которые есть у вас дома</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="about-section">
+            <h2>ℹ️ О проекте</h2>
+            <p><strong>ВкусноДом</strong> — это кулинарный сервис, который помогает решить главный вопрос каждой хозяйки: <em>«Что приготовить из того, что есть в холодильнике?»</em>. Отметьте имеющиеся у вас ингредиенты, укажите желаемое время готовки и количество порций — и сайт мгновенно подберёт подходящие рецепты.</p>
+            <p>Здесь можно просматривать все рецепты по категориям, сохранять понравившиеся в <strong>избранное</strong> и добавлять <strong>собственные рецепты</strong>. Все данные хранятся прямо в вашем браузере.</p>
+            <div class="about-badges">
+                <span class="badge">🔍 Поиск по ингредиентам</span>
+                <span class="badge">⏱️ Фильтр по времени</span>
+                <span class="badge">❤️ Избранное</span>
+                <span class="badge">➕ Свои рецепты</span>
+            </div>
+        </div>
+
+        <h1 class="page-title">Поиск рецептов</h1>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Поиск по названию или ингредиентам...">
+                <button class="btn btn-secondary" onclick="resetFilters()">Сбросить</button>
+            </div>
+
+            <div class="filter-title">🧂 Выберите имеющиеся ингредиенты:</div>
+            <div class="ingredients-filter" id="ingredientsFilter"></div>
+
+            <div class="filter-controls">
+                <label>⏱️ Время до:</label>
+                <select id="timeFilter">
+                    <option value="999">Любое</option>
+                    <option value="30">30 минут</option>
+                    <option value="60">1 час</option>
+                    <option value="120">2 часа</option>
+                </select>
+                <label>👥 Порций от:</label>
+                <select id="servingsFilter">
+                    <option value="0">Любое</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="results-info" id="resultsInfo"></div>
+        <div class="recipes-grid" id="recipesGrid"></div>
+    </main>
+
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="recipeDetail"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 ВкусноДом — Кулинарный сайт с поиском по ингредиентам</p>
+        <p class="footer-dev">Сайт разработан: Балалаева Дарья | ИС 1-25 | 2026 год</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
